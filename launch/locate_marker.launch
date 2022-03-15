@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="mobile_robo" type="locate_marker.py" name="locate_marker" output="screen"></node>
+</launch>

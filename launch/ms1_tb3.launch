@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find mobile_robo)/launch/tb3_skeleton_rpc.launch"></include>
+    <include file="$(find explore_lite)/launch/explore.launch"></include>
+    <node pkg="mobile_robo" type="get_init_pose.py" name="get_init_pose" output="screen"></node>
+    <node pkg="mobile_robo" type="go_to_origin.py" name="go_to_origin" output="screen"></node>
+</launch>
