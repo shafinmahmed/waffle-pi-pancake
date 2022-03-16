@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find mobile_robo)/launch/tb3_skeleton_rpc.launch"></include>
+    <include file="$(find aruco_detect)/launch/aruco_detect.launch"></include>
+    <include file="$(find mobile_robo)/launch/locate_camera.launch"></include>
+</launch>

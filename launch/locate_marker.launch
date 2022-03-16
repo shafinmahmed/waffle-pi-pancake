@@ -1,4 +1,5 @@
 <launch>
-    <node pkg="mobile_robo" type="locate_marker.py" name="locate_marker" output="screen"></node>
-    <node pkg="tf" type="static_transform_publisher" name="base_camera" args="0.1 0.1 0.1 0 1.57 0 /map /camera 100"></node>
+    <node pkg="mobile_robo" type="locate_marker_0.py" name="locate_marker_0" output="screen"></node>
+    <node pkg="mobile_robo" type="locate_marker_1.py" name="locate_marker_1" output="screen"></node>
+    <node pkg="tf" type="static_transform_publisher" name="base_camera" args="0.1 0.1 0.1 0 1.57 0 /base_link /camera 100"></node>
 </launch>

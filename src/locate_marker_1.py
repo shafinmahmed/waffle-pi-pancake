@@ -21,9 +21,9 @@ def create_marker(trans, rot):
     marker.id = 0
 
     # Set the scale of the marker
-    marker.scale.x = 1.0
-    marker.scale.y = 1.0
-    marker.scale.z = 1.0
+    marker.scale.x = 0.2
+    marker.scale.y = 0.2
+    marker.scale.z = 0.2
 
     # Set the color
     marker.color.r = 0.0
@@ -53,11 +53,11 @@ def locate_marker():
 
     while not rospy.is_shutdown():
         try:
-            (trans,rot) = listener.lookupTransform('/fiducial_2', '/map', rospy.Time(0))
+            (trans,rot) = listener.lookupTransform('/map', '/fiducial_1', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             continue
         
-        publisher = rospy.Publisher('visulization_marker/ArUco_Location', Marker, queue_size=50)
+        publisher = rospy.Publisher('visulization_marker/ArUco_Location_1', Marker, queue_size=50)
 
         marker = create_marker(trans, rot)
 

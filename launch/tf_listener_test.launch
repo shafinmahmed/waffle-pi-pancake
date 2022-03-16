@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="mobile_robo" type="tf_listener_test.py" name="tf_listener_test" output="screen"></node>
-</launch>
