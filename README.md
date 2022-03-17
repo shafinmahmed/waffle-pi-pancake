@@ -133,7 +133,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Shafin Ahmed](maito:shafin.ahmed@ontariotechu.net) </br>
+[Shafin Ahmed](mailto:shafin.ahmed@ontariotechu.net) </br>
 [Mashaal Jawad](mailto:mashaal.jawad@ontariotechu.net) </br>
 [Noor Khabbaz](mailto:noor.khabbaz@ontariotechu.net) </br>
 [Shahram Mohsini](mailto:shahram.mohsini@ontariotechu.net) </br>
