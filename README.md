@@ -79,7 +79,7 @@ Make sure to have the following installed:
 ### Installation
 Install the package on both your _Remote PC_ and the _TB3 Onboard Raspberry Pi_. Do the following for both.
 
-1. Clone the repo to `[your_workspace/src/]`
+1. Clone the repo to `[your_workspace]/src/`
 
    ```sh
    git clone https://github.com/shafinmahmed/waffle-pi-pancake.git
