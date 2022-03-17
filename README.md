@@ -133,10 +133,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Shafin Ahmed - shafin.ahmed@ontariotechu.net </br>
-Mashaal Jawad - mashaal.jawad@ontariotechu.net </br>
-Noor Khabbaz - noor.khabbaz@ontariotechu.net </br>
-Shahram Mohsini - shahram.mohsini@ontariotechu.net </br>
+[Shafin Ahmed](maito:shafin.ahmed@ontariotechu.net) </br>
+[Mashaal Jawad](mailto:mashaal.jawad@ontariotechu.net) </br>
+[Noor Khabbaz](mailto:noor.khabbaz@ontariotechu.net) </br>
+[Shahram Mohsini](mailto:shahram.mohsini@ontariotechu.net) </br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
