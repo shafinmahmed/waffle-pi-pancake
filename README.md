@@ -20,7 +20,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
-<h3 align="center">Autonomous Package Retrieval: TurtleBot3</h3>
+<h1 align="center">Autonomous Package Retrieval: TurtleBot3</h1>
 
   <p align="center">
     METE 4300U Course Project @ Ontario Tech University
