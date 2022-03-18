@@ -147,7 +147,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 * [Dr. Scott Nokleby](https://ontariotechu.ca/experts/feas/scott-nokleby.php)
 * [Lillian Goodwin](mailto:lillian.goodwin@ontariotechu.ca)
-* [Christopher Baird](Christopher.Baird@ontariotechu.ca)
+* [Christopher Baird](mailto:Christopher.Baird@ontariotechu.ca)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
