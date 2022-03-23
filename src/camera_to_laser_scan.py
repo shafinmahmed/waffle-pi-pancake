@@ -13,7 +13,7 @@ box_id = "0"
 time_secs = 0
 time_nsecs = 0
 
-# callback function for Aruco marker location
+# callback function for Aruco marker location 
 def cb_laserScan(data):
     global box_angle, box_distance, box_id, time_secs, time_nsecs
     

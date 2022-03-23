@@ -68,7 +68,7 @@ def locate_marker():
         # create the Marker object
         marker = create_marker(trans, rot)
 
-        # publish the Marker object 
+        # publish the Marker object
         publisher.publish(marker)
 
 

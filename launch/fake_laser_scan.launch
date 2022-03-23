@@ -1,3 +1,4 @@
 <launch>
+    
     <node pkg="mobile_robo" type="camera_to_laser_scan.py" name="camera_to_laser_scan" output="screen"></node>
 </launch>

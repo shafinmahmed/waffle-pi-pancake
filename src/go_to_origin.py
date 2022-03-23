@@ -13,7 +13,7 @@ def mb_callback(data):
         global flag
         flag = True
 
-# callback function for /tb3_init_pose subscription
+# callback function for /tb3_init_pose subscription 
 def ip_callback(data):
     if (data != None):
         global origGoal

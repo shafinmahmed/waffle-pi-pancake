@@ -37,7 +37,7 @@ def get_init_pose():
     while not rospy.is_shutdown():
         global init_pose
 
-        # populate with time stamp information
+        # populate with time stamp information 
         init_pose.header.stamp = rospy.get_rostime()
         init_pose.header.frame_id = 'odom'
         
