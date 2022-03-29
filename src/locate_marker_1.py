@@ -34,8 +34,8 @@ def create_marker(trans, rot):
 
     # Set the pose of the marker
     marker.pose.position.x = trans[0]
-    marker.pose.position.y = trans[1]
-    marker.pose.position.z = trans[2]
+    marker.pose.position.y = trans[2]
+    marker.pose.position.z = trans[1]
     marker.pose.orientation.x = rot[0]
     marker.pose.orientation.y = rot[1]
     marker.pose.orientation.z = rot[2]
@@ -60,6 +60,8 @@ def locate_marker():
             # lookup transform between map and fiducial_1
             (trans,rot) = listener.lookupTransform('/map', '/fiducial_1', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+            trans = [20, 20, 20]
+            rot = [0, 0, 0, 1]
             continue
         
         # create the publisher object to publish the Marker object to rviz

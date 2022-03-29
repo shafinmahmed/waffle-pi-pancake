@@ -3,11 +3,15 @@
 import rospy
 import tf
 from visualization_msgs.msg import Marker
+cntr = 0
+intermed_marker = Marker()
+flag = True
 
 # function to create a Marker object from the trans and rot array populated by the tf listener
 def create_marker(trans, rot):
 
     # create the Marker object to be returned
+
     marker = Marker()
 
     # populate with marker parameters
@@ -34,15 +38,15 @@ def create_marker(trans, rot):
 
     # Set the pose of the marker
     marker.pose.position.x = trans[0]
-    marker.pose.position.y = trans[1]
-    marker.pose.position.z = trans[2]
+    marker.pose.position.y = trans[2]
+    marker.pose.position.z = trans[1]
     marker.pose.orientation.x = rot[0]
     marker.pose.orientation.y = rot[1]
     marker.pose.orientation.z = rot[2]
     marker.pose.orientation.w = 1.0
-
+    
     # return the Marker object
-    return marker
+    return marker 
 
 def locate_marker():
     # initialize the node
@@ -59,6 +63,8 @@ def locate_marker():
             # lookup transform between map and fiducial_0 
             (trans,rot) = listener.lookupTransform('/map', '/fiducial_0', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+            trans = [0, 0, 0]
+            rot = [0, 0, 0, 1]
             continue
         
         # create the publisher object to publish the Marker object to rviz
