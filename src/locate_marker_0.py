@@ -16,7 +16,7 @@ def create_marker(trans, rot):
 
     # populate with marker parameters
     #################################
-    marker.header.frame_id = "/map"
+    marker.header.frame_id = "map"
     marker.type = marker.SPHERE
     marker.action = marker.ADD
     marker.header.stamp = rospy.Time.now()
@@ -63,8 +63,6 @@ def locate_marker():
             # lookup transform between map and fiducial_0 
             (trans,rot) = listener.lookupTransform('/map', '/fiducial_0', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
-            trans = [0, 0, 0]
-            rot = [0, 0, 0, 1]
             continue
         
         # create the publisher object to publish the Marker object to rviz
