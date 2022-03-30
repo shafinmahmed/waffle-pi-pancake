@@ -1,4 +1,5 @@
 <launch>
     
     <node pkg="mobile_robo" type="camera_to_laser_scan.py" name="camera_to_laser_scan" output="screen"></node>
+    <node pkg="mobile_robo" type="camera_to_laser_scan_1.py" name="camera_to_laser_scan_1" output="screen"></node>
 </launch>

@@ -8,7 +8,7 @@ from visualization_msgs.msg import Marker
 
 box_angle = 0
 box_distance = 0
-box_id = "1"
+box_id = "0"
 time_secs = 0
 time_nsecs = 0
 
@@ -20,19 +20,19 @@ def cb_laserScan(data):
     # populate with fake scan parameters
     box_angle = atan2(data.pose.position.y, data.pose.position.x)
     box_distance = sqrt((data.pose.position.x * data.pose.position.x) + (data.pose.position.y * data.pose.position.y))
-    box_id = "1"
+    box_id = "0"
     time_secs = data.header.stamp.secs
     time_nsecs = data.header.stamp.nsecs
 
 
 def camera_to_laser_scan():
     # initialize node
-    rospy.init_node('camera_to_laser_scan_0', anonymous=True)
+    rospy.init_node('camera_to_laser_scan_1', anonymous=True)
 
-    rospy.Subscriber('visulization_marker/ArUco_Location_0', Marker, cb_laserScan)
+    rospy.Subscriber('visulization_marker/ArUco_Location_1', Marker, cb_laserScan)
 
     # publisher to publish fake scan information
-    publisher = rospy.Publisher('camera_to_laser_scan_0', LaserScan, queue_size=50) 
+    publisher = rospy.Publisher('camera_to_laser_scan_1', LaserScan, queue_size=50) 
 
     rate = rospy.Rate(10) # 10 Hz refresh rate
 
