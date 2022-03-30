@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="mobile_robo" type="get_max_odom.py" name="get_max_odom" output="screen"></node>
+</launch>
