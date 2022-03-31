@@ -116,7 +116,7 @@ roslaunch mobile_robo tb3_bringup.launch
 
 - [x] Milestone 1: map arbitrary enclosed area and return to starting pose
 - [x] Milestone 2: Milestone 1 + detect and mark packages in the enclosed area
-- [ ] Milestone 3: Milestone 2 + perform obstacle avoidance in the enclosed area
+- [x] Milestone 3: Milestone 2 + perform obstacle avoidance in the enclosed area
 - [ ] Milestone 4: Milestone 3 + pick up the desired package
 <p align="right">(<a href="#top">back to top</a>)</p>
 
