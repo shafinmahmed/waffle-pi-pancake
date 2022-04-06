@@ -3,11 +3,6 @@
 import rospy
 import tf
 from visualization_msgs.msg import Marker
-from std_msgs.msg import String
-cntr = 0
-intermed_marker = Marker()
-flag = True
-flag = ""
 
 # function to create a Marker object from the trans and rot array populated by the tf listener
 def create_marker(trans, rot):
@@ -39,9 +34,9 @@ def create_marker(trans, rot):
     marker.color.a = 1.0
 
     # Set the pose of the marker
-    marker.pose.position.x = 0.01
-    marker.pose.position.y = trans[2]
-    marker.pose.position.z = trans[0]
+    marker.pose.position.x = trans[0]
+    marker.pose.position.y = trans[1]
+    marker.pose.position.z = trans[2]
     marker.pose.orientation.x = rot[0]
     marker.pose.orientation.y = rot[1]
     marker.pose.orientation.z = rot[2]

@@ -44,7 +44,7 @@ def camera_to_laser_scan():
         # populate with fake scan parameters
         laserScan.header.stamp.secs = time_secs
         laserScan.header.stamp.nsecs = time_nsecs
-        laserScan.header.frame_id = 'odom'
+        laserScan.header.frame_id = 'map'
         laserScan.angle_min = box_angle - 0.01
         laserScan.angle_max = box_angle + 0.01
         laserScan.range_min = 0.0
