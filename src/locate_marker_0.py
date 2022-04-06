@@ -9,6 +9,7 @@ from visualization_msgs.msg import Marker
 def create_marker(trans, rot):
 
     # create the Marker object to be returned
+    # create the Marker object to be returned
 
     marker = Marker()
 
