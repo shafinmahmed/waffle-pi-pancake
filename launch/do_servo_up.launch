@@ -1,4 +1,4 @@
 <launch>
-    <node pkg="mobile_robo" type="do_servo_up.py" name="do_servo_up" output="screen"><$
+    <node pkg="mobile_robo" type="do_servo_up.py" name="do_servo_up" output="screen"></node>
 </launch>
 
