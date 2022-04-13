@@ -7,7 +7,6 @@ from actionlib_msgs.msg import GoalID
 
 flag = False
 
-servo = Servo(17)
 
 def mb_callback(data):
     if (data.id == ''):     # condition to trigger sending return to origin goal to move_base_simple/goal
@@ -20,12 +19,21 @@ def servo_up():
     rospy.Subscriber('move_base/cancel', GoalID, mb_callback)
 
     rate = rospy.Rate(10)
+
+
+    servo = Servo(17)
     
     while not rospy.is_shutdown():
         if (flag == True):
             try:
                 rospy.loginfo("SERVO UP")
                 servo.value = -0.5
+            except KeyboardInterrupt:
+                pass
+        else:
+            try:
+                rospy.loginfo("SERVO DOWN")
+                servo.value = 0.5
             except KeyboardInterrupt:
                 pass
 

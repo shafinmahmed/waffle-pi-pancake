@@ -1,5 +1,5 @@
 <launch>
     <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"></include>
     <include file="$(find turtlebot3_bringup)/launch/turtlebot3_rpicamera.launch"></include>
-    <include file="$(find mobile_robo)/launch/do_servo_up.launch"></include>
+    <!-- <include file="$(find mobile_robo)/launch/do_servo_up.launch"></include> -->
 </launch>
