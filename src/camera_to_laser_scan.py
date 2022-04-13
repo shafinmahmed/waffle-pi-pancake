@@ -5,12 +5,17 @@ from math import atan2
 import rospy
 from sensor_msgs.msg import LaserScan
 from visualization_msgs.msg import Marker
+from sensor_msgs.msg import PointCloud
+from geometry_msgs.msg import Point32
 
 box_angle = 0
 box_distance = 0
 box_id = "1"
 time_secs = 0
 time_nsecs = 0
+
+fakePoints = []
+
 
 # global variables for fake scan parameters
 
@@ -23,6 +28,7 @@ def cb_laserScan(data):
     box_id = "1"
     time_secs = data.header.stamp.secs
     time_nsecs = data.header.stamp.nsecs
+
 
 
 def camera_to_laser_scan():

@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="mobile_robo" type="stop_explore.py" name="stop_explore" output="screen"></node>
+    <node pkg="mobile_robo" type="stop_explore_1.py" name="stop_explore_1" output="screen"></node>
+</launch>

@@ -4,6 +4,8 @@ import rospy
 import tf
 from visualization_msgs.msg import Marker
 
+foundFlag = False
+
 # function to create a Marker object from the trans and rot array populated by the tf listener
 def create_marker(trans, rot):
 
@@ -55,16 +57,18 @@ def locate_marker():
 
     rate = rospy.Rate(10)       # 10 Hz refresh rate
 
+    publisher = rospy.Publisher('visulization_marker/ArUco_Location_1', Marker, queue_size=50)
 
     while not rospy.is_shutdown():
+        global foundFlag
         try:
             # lookup transform between map and fiducial_0 
             (trans,rot) = listener.lookupTransform('/map', '/fiducial_1', rospy.Time(0))
+            foundFlag = True
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             continue
         
         # create the publisher object to publish the Marker object to rviz
-        publisher = rospy.Publisher('visulization_marker/ArUco_Location_1', Marker, queue_size=50)
 
 
         # create the Marker object
