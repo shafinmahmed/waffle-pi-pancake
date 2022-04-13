@@ -11,6 +11,7 @@ servo = Servo(17)
 
 def mb_callback(data):
     if (data.id == ''):     # condition to trigger sending return to origin goal to move_base_simple/goal
+        rospy.logdebug("EXPLORE STOPPED")
         global flag
         flag = True
 
@@ -23,7 +24,8 @@ def servo_up():
     while not rospy.is_shutdown():
         if (flag == True):
             try:
-                servo.value = 0.0
+                rospy.loginfo("SERVO UP")
+                servo.value = -0.5
             except KeyboardInterrupt:
                 pass
 
@@ -41,5 +43,5 @@ if __name__ == '__main__':
     try:
         servo_up()
         rospy.spin()
-    except KeyboardInterrupt:      #may want to change to rospy.ROSInterruptException:
+    except rospy.ROSInterruptException:      #may want to change to rospy.ROSInterruptException:
         pass
