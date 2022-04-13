@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="mobile_robo" type="get_min_odom.py" name="get_min_odom" output="screen"></node>
+</launch>
